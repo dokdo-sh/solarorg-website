@@ -1,0 +1,31 @@
+{
+  "name": "besos",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node images.js"
+  },
+  "dependencies": {
+    "async": "^3.1.0",
+    "body-parser": "^1.19.0",
+    "bufferutil": "^4.0.1",
+    "cookie-parser": "~1.4.4",
+    "csurf": "^1.10.0",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "express-session": "^1.16.2",
+    "flat": "^5.0.0",
+    "fs": "0.0.1-security",
+    "http-errors": "~1.6.3",
+    "ini": "^1.3.5",
+    "morgan": "~1.9.1",
+    "request": "^2.88.0",
+    "server": "^1.0.27",
+    "twig": "^1.15.4",
+    "utf-8-validate": "^5.0.2",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
