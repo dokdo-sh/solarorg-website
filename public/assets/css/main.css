@@ -9577,9 +9577,7 @@ div[class*="elem"] img {
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    background-color: rgba(225, 232, 255, 0.702);
-    box-shadow: 3.871px 15.525px 68px 0px rgba(29, 40, 143, 0.5);
-    padding: 60px 15px;
+    padding: 5px 5px;
     text-align: center;
     margin: 0 auto 30px;
 }
