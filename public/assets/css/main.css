@@ -6044,9 +6044,9 @@ input[type="submit"] {
     padding-left: 58px;
     padding-right: 58px;
     border-radius: 30px;
-    background: -ms-linear-gradient(0deg, #5c68f2 12%, #9468f9 67%, #cc68ff 100%);
-    background: -moz-linear-gradient(0deg, #5c68f2 12%, #9468f9 67%, #cc68ff 100%);
-    background: -webkit-linear-gradient(0deg, #5c68f2 12%, #9468f9 67%, #cc68ff 100%);
+    background: -ms-linear-gradient(0deg, #ffffff 12%, #f96868 67%, #ffaf68 100%);
+    background: -moz-linear-gradient(0deg, #ffffff 12%, #f96868 67%, #ffaf68 100%);
+    background: -webkit-linear-gradient(0deg, #ffffff 12%, #f96868 67%, #ffaf68 100%)
 }
 
 .trial-wrapper .trial-content {
