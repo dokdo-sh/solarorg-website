@@ -17817,3 +17817,11 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
         padding: 130px 0 75px;
     }
 }
+
+
+/* custom */
+
+.header-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
