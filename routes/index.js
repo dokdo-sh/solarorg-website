@@ -37,11 +37,11 @@ router.get('/desktop-wallet', function(req, res, next) {
 router.get('/mobile-wallet', function(req, res, next) {
     res.render('apps/mobile-wallet', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
-
+/*
 router.get('/web-wallet', function(req, res, next) {
     res.render('apps/web-wallet', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
-
+*/
 /* GET blockchain pages */
 
 router.get('/staking', function(req, res, next) {
