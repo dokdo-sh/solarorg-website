@@ -1666,6 +1666,7 @@ input[type="submit"] {
     border: 1px solid #4c218b;
     border-radius: 50%;
     color: #ffffff;
+    background: #fb2904;
 }
 
 .social-icons li a.active,
@@ -1940,7 +1941,8 @@ input[type="submit"] {
 
 .footer-link li a {
     font-size: 16px;
-    color: #ffffff;
+    color: orangered;
+    font-weight: 600;
 }
 
 .footer-link li a:hover {
