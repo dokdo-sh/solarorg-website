@@ -2966,7 +2966,9 @@ input[type="submit"] {
 
 @media (min-width: 576px) {
     .header-section.header-cl-black .header-wrapper .header-button {
-        color: #ed5c15;
+        color: white;
+        background: #ed5c15;
+        border: none;
     }
 }
 
@@ -17824,4 +17826,8 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
 .header-container {
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.header-title {
+    color: orangered!important;
 }

@@ -52,18 +52,14 @@ router.get('/dev-docs', function(req, res, next) {
     res.render('blockchain/dev-docs', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
-router.get('/exchange-docs', function(req, res, next) {
-    res.render('blockchain/exchange-docs', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
-});
-
 router.get('/swap-details', function(req, res, next) {
     res.render('blockchain/swap-details', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
-/* GET join-us page */
+/* GET community page */
 
-router.get('/join-us', function(req, res, next) {
-    res.render('join-us', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+router.get('/community', function(req, res, next) {
+    res.render('community', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
 module.exports = router;
