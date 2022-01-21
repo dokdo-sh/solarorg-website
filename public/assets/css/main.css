@@ -1900,18 +1900,18 @@ input[type="submit"] {
 
 @media (min-width: 1200px) {
     .bg-xl-100 {
-        bottom: 160px;
+        bottom: 60px;
     }
 }
 
 @media (min-width: 992px) {
     .footer-top {
-        padding-bottom: 112px;
+        padding-bottom: 60px;
     }
 }
 
 .footer-top .logo {
-    max-width: 140px;
+    max-width: 120px;
     margin: 0 auto 30px;
 }
 
@@ -1995,7 +1995,6 @@ input[type="submit"] {
     left: 0;
     width: 100%;
     height: 180px;
-    background: url(./img/footer-shape.png) no-repeat center bottom;
     background-size: cover;
 }
 
