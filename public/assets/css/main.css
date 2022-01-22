@@ -8615,7 +8615,6 @@ input[type="submit"] {
     line-height: 94px;
     font-size: 60px;
     color: #ffffff;
-    background: #b7b9cf;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
@@ -8628,11 +8627,6 @@ input[type="submit"] {
     margin: 0;
     font-weight: 600;
     text-transform: capitalize;
-}
-
-.download-item:hover .thumb,
-.download-item.active .thumb {
-    background: #ee4730;
 }
 
 @media (max-width: 767px) {
@@ -17831,6 +17825,11 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
 
 .header-title {
     color: orangered!important;
+}
+
+.wallet-icon {
+    width: 94px;
+    height: 94px;
 }
 
 
