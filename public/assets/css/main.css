@@ -17838,7 +17838,6 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
 
 @media (max-width: 800px) {
     .mobile-center {
-        max-width: -webkit-fill-available!important;
         justify-content: center!important;
         text-align: center!important;
         align-items: center!important;
@@ -17848,5 +17847,8 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
     }
     .mobile-hide {
         display: none!important;
+    }
+    .mobile-img {
+        max-width: -webkit-fill-available!important;
     }
 }
