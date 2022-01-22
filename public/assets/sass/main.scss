@@ -1500,8 +1500,8 @@ div[class*="col"] {
         &::after,
         &::before {
             opacity: .5;
-            background: -webkit-linear-gradient(-65deg, #dda765 0%, #fc6811 100%);
-            background: -webkit-linear-gradient(-65deg, #dda765 0%, #fc6811 100%);
+            background: -webkit-linear-gradient(-65deg, #dda765 0%, #ff4500 100%);
+            background: -webkit-linear-gradient(-65deg, #dda765 0%, #ff4500 100%);
         }
     }
     @include breakpoint(max-lg) {
