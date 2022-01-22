@@ -17832,3 +17832,21 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
 .header-title {
     color: orangered!important;
 }
+
+
+/* mobile optimize */
+
+@media (max-width: 800px) {
+    .mobile-center {
+        max-width: -webkit-fill-available!important;
+        justify-content: center!important;
+        text-align: center!important;
+        align-items: center!important;
+    }
+    .mobile-spacing {
+        margin-bottom: 25px;
+    }
+    .mobile-hide {
+        display: none!important;
+    }
+}
