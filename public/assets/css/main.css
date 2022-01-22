@@ -56,12 +56,12 @@
 ---Banner Section Six
 ---Banner Section Five
 ---Banner Section Seven
----Banner Section Eight 
+---Banner Section Eight
 ---Banner Section Nine
----Banner Section 10 
+---Banner Section 10
 ---Banner 11 Section
----Banner Section 12 
----Banner Section 13 
+---Banner Section 12
+---Banner Section 13
 ---banner Section 15
 ---Banner Section 14
 ---App Banner
@@ -101,7 +101,7 @@
 24. Custom Plan CSS
 ---------------------------
 25. Counter Section CSS
----Counter Section Two 
+---Counter Section Two
 ---------------------------
 26. How Section Two  CSS
 ---------------------------
@@ -10794,7 +10794,6 @@ div[class*="col"]:nth-of-type(4n+4) .ex-item .ex-thumb {
     -moz-border-radius: 50%;
     border-radius: 50%;
     box-shadow: 2.419px 9.703px 12.48px 0.52px rgba(219, 218, 255, 0.5);
-    background: #ffffff;
 }
 
 .recharge-item .recharge-thumb .thumb img {
