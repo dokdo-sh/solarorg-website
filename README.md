@@ -22,5 +22,3 @@ for live editing use "pm2 start solar-website.js --watch"
 pm2 start solar-website.js --watch
 ```
 Website visible at "https://localhost:8787"
-
-Under development. 
