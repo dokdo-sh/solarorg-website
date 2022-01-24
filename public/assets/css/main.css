@@ -8961,8 +8961,8 @@ div[class*="elem"] img {
 
 .how--item .how-content {
     position: relative;
-    text-align: center;
-    max-width: 255px;
+    text-align: start;
+    max-width: 470px;
 }
 
 .how--item .how-content .button-4 {
@@ -9011,10 +9011,10 @@ div[class*="elem"] img {
 
 @media (min-width: 992px) {
     .how--item:nth-of-type(2n+1) .how-content {
-        margin-left: 8.333333%;
+        /* margin-left: 8.333333%; */
     }
     .how--item:nth-of-type(2n+2) .how-content {
-        margin-right: 8.333333%;
+        /* margin-right: 8.333333%; */
     }
 }
 
@@ -9025,10 +9025,11 @@ div[class*="elem"] img {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    background: -ms-linear-gradient(-127deg, #0015fe 0%, #fe36c0 88%);
-    background: -moz-linear-gradient(-127deg, #0015fe 0%, #fe36c0 88%);
-    background: -webkit-linear-gradient(-127deg, #0015fe 0%, #fe36c0 88%);
+    background: -ms-linear-gradient(0deg, #ED5C15 0%, #FDEB46 100%);
+    background: -moz-linear-gradient(0deg, #ED5C15 0%, #FDEB46 100%);
+    background: -webkit-linear-gradient(0deg, #ED5C15 0%, #FDEB46 100%);
     z-index: 1;
+    top: 3% !important;
 }
 
 @media (max-width: 767px) {
@@ -9044,9 +9045,9 @@ div[class*="elem"] img {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    background: -ms-linear-gradient(-127deg, #0015fe 0%, #fe36c0 88%);
-    background: -moz-linear-gradient(-127deg, #0015fe 0%, #fe36c0 88%);
-    background: -webkit-linear-gradient(-127deg, #0015fe 0%, #fe36c0 88%);
+    background: -ms-linear-gradient(0deg, #ed5c1582 0%, #fdeb468a 100%);
+    background: -moz-linear-gradient(0deg, #ed5c1582 0%, #fdeb468a 100%);
+    background: -webkit-linear-gradient(0deg, #ed5c1582 0%, #fdeb468a 100%);
     box-shadow: 3.694px -4.728px 38px 0px rgba(17, 65, 189, 0.52);
 }
 
@@ -9074,6 +9075,16 @@ div[class*="elem"] img {
     }
 }
 
+.how-wrapper-background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15%;
+    margin: auto;
+    opacity: 0.05;
+    width: 80%;
+}
+
 .how-wrapper {
     position: relative;
     padding-top: 45px;
@@ -9093,10 +9104,10 @@ div[class*="elem"] img {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     width: 10px;
-    height: calc(100% + 150px);
-    background: -ms-linear-gradient(-127deg, #9441d4 15%, #ff51ff 100%);
-    background: -moz-linear-gradient(-127deg, #9441d4 15%, #ff51ff 100%);
-    background: -webkit-linear-gradient(-127deg, #9441d4 15%, #ff51ff 100%);
+    height: calc(100%);
+    background: -ms-linear-gradient(270deg, #F7B733 0%, rgba(235, 115, 64, 0.85) 100%);
+    background: -moz-linear-gradient(270deg, #F7B733 0%, rgba(235, 115, 64, 0.85) 100%);
+    background: -webkit-linear-gradient(270deg, #F7B733 0%, rgba(235, 115, 64, 0.85) 100%);
 }
 
 @media (max-width: 767px) {
@@ -17883,4 +17894,73 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
 
 .exchanges-item {
     margin: 10px 20px
+}
+
+.roadmap-milestone {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    background: -ms-linear-gradient(295deg, #F12711 -15%, #F5AF19 50%);
+    background: -moz-linear-gradient(295deg, #F12711 -15%, #F5AF19 50%);
+    background: -webkit-linear-gradient(295deg, #F12711 -15%, #F5AF19 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.roadmap-title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 8px;
+
+    color: #1A1A1A;
+}
+
+.roadmap-description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 8px;
+
+    color: #1A1A1A !important;
+}
+
+/* Road map page for mobile screen */
+@media (max-width: 767px) {
+    .roadmap-milestone {
+        font-size: 48px;
+    }
+
+    .roadmap-title {
+        font-size: 28px;
+    }
+
+    .roadmap-description {
+        font-size: 16px;
+    }
+}
+
+/* Road map page for tablet screen */
+@media (max-width: 1199px) {
+    .how--item:nth-of-type(2n+2) {
+        flex-direction: unset;
+    }
+
+    .how--item .anime-item {
+        left: 0 !important;
+    }
+
+    .how-wrapper::after {
+        left: 0;
+    }
+
+    .how-content {
+        margin-left: 32px;
+    }
 }
