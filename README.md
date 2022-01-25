@@ -1,5 +1,9 @@
 # Solar Website
 
+<p align="center">
+    <img src="./banner.jpg?sanitize=true" />
+</p>
+
 Solar Website 
 
 
