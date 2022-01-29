@@ -13176,7 +13176,13 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
 /*Privacy Section Starts Here*/
 
 .privacy-item {
-    margin-bottom: 62px;
+    /* margin-bottom: 62px; */
+}
+
+.privacy-item:not(:first-child):before {
+     height: 128px;
+    content: "";
+    display:block;
 }
 
 .privacy-item .title {
@@ -13198,6 +13204,12 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     }
     .privacy-item p {
         margin-bottom: 30px;
+    }
+
+    .privacy-item:not(:first-child):before {
+         height: 84px;
+        content: "";
+        display:block;
     }
 }
 
