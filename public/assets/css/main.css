@@ -13180,9 +13180,9 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
 }
 
 .privacy-item:not(:first-child):before {
-     height: 128px;
+    height: 128px;
     content: "";
-    display:block;
+    display: block;
 }
 
 .privacy-item .title {
@@ -13205,11 +13205,10 @@ div[class*="col"]:nth-child(even) .team-item:hover .team-thumb::before {
     .privacy-item p {
         margin-bottom: 30px;
     }
-
     .privacy-item:not(:first-child):before {
-         height: 84px;
+        height: 84px;
         content: "";
-        display:block;
+        display: block;
     }
 }
 
@@ -17928,7 +17927,6 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
     font-size: 36px;
     line-height: 42px;
     margin-top: 8px;
-
     color: #1A1A1A;
 }
 
@@ -17939,40 +17937,57 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
     font-size: 18px;
     line-height: 28px;
     margin-top: 8px;
-
     color: #1A1A1A !important;
 }
 
+
 /* Road map page for mobile screen */
+
 @media (max-width: 767px) {
     .roadmap-milestone {
         font-size: 48px;
     }
-
     .roadmap-title {
         font-size: 28px;
     }
-
     .roadmap-description {
         font-size: 16px;
     }
 }
 
+
 /* Road map page for tablet screen */
+
 @media (max-width: 1199px) {
     .how--item:nth-of-type(2n+2) {
         flex-direction: unset;
     }
-
     .how--item .anime-item {
         left: 0 !important;
     }
-
     .how-wrapper::after {
         left: 0;
     }
-
     .how-content {
         margin-left: 32px;
     }
+}
+
+.doc-button {
+    background: #ed5c15!important;
+    border-radius: 25px!important;
+    color: white!important;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    width: fit-content;
+}
+
+.doc-button:hover {
+    background: white!important;
+    color: #ed5c15!important;
+    border-radius: 25px!important;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
 }
