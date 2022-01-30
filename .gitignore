@@ -10,3 +10,6 @@ db/
 # Package lock and temp files
 .package.json
 package-lock.json
+
+# Config file
+config.ini

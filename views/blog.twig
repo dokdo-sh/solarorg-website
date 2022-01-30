@@ -1,0 +1,53 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+<body data-spy="scroll" data-target="#mobile-wallet-menu" data-offset="150">
+
+{% include "/blocks/header.twig" %}
+
+<section class="comunity-section padding-top padding-bottom oh pos-rel">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-12">
+				<h4>Recent Posts</h4>
+				<hr />
+
+{% for type, message in messages %}
+	{% if (type == 'error') %}
+		<div class="alert alert-danger">
+			<i class="fa fa-times-circle"></i>
+			{{ message }}
+		</div>
+	{% elseif (type == 'notice') %}
+		<div class="alert alert-success">
+			<i class="fa fa-check"></i>
+			{{ message }}
+		</div>
+	{% endif %}
+{% endfor %}
+
+
+{% for post in blogPosts %}
+
+	<h5 style="margin-bottom:20px;"><a href="/blog/{{ post.id }}">{{ post.title }}</a></h5>
+	
+	<p style="margin-bottom:10px;">{{ post.body }}</p>
+	
+	<small>Posted by {{post.user}} @ {{ post.postDate }}</small><br />
+	<small><a href="/blog/{{ post.id }}">Read more · Click here</a></small><br />
+	<small>Tags: {{post.tags}}</small>
+	<hr />
+	
+{% endfor %}
+
+			</div>
+		</div>
+	</div>
+</section>
+
+    {% include "/blocks/footer.twig" %}
+
+</body>
+
+{% endblock %}
