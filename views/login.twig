@@ -1,0 +1,66 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+<body data-spy="scroll" data-target="#mobile-wallet-menu" data-offset="150">
+
+{% include "/blocks/header.twig" %}
+
+<section class="comunity-section padding-top padding-bottom oh pos-rel">
+	<div class="container">
+		<div class="row align-items-center">
+			<div class="col-lg-12">
+                
+{% for type, message in messages %}
+	{% if (type == 'error') %}
+		<div class="alert alert-danger">
+			<i class="fa fa-times-circle"></i>
+			{{ message }}
+		</div>
+	{% elseif (type == 'notice') %}
+		<div class="alert alert-success">
+			<i class="fa fa-check"></i>
+			{{ message }}
+		</div>
+	{% endif %}
+{% endfor %}
+
+				<form method='post' action='/login'>
+				  <div style="display:flex; flex-direction: column; justify-content:center; align-items:center;">
+					<div style='border-bottom:1px solid #ccc; width:60%; margin-bottom:40px; margin-top:20px;'><h4>Blog Admin</h4></div>
+					<div style="width:50%; margin-bottom:10px;">
+					  <label for="usernamel">Username</label>
+					  <input class="u-full-width" type="text" placeholder="" name="username" id="username">
+					</div>
+					<div style="width:50%; margin-bottom:10px;">
+					  <label for="password">Password</label>
+					  <input class="u-full-width" type="password" placeholder="" name="password" id="password">
+					</div>
+					<div style="width:50%; margin-bottom:10px;">
+					  <label for="usernamel">Two Factor</label>
+					  <input class="u-full-width" type="text" placeholder="" name="twofactor" id="twofactor">
+					</div>
+					<div style="width:50%; text-align:center;">
+						<input class="button-primary" type="submit" value="Login">
+					</div>
+
+				  </div>
+				  <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+				</form>
+
+			</div>
+		</div>
+	</div>
+</section>
+</body>
+
+{% endblock %}
+{% block javascripts %}
+<script>
+$(document).ready(function() {
+	
+    
+});    
+    
+</script>
+{% endblock %}

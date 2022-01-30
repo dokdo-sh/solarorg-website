@@ -1,0 +1,8 @@
+; Crypto Encryption
+crypt_secret = ""
+
+; Session
+session_secret = ""
+
+; DB
+mongo_connect = "mongodb://localhost:27017"
