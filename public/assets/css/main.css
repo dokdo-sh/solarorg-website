@@ -1658,21 +1658,22 @@ input[type="submit"] {
 }
 
 .social-icons li a {
-    width: 36px;
-    height: 36px;
-    line-height: 36px;
+    width: 64px;
+    height: 64px;
+    line-height: 64px;
     text-align: center;
-    font-size: 16px;
+    font-size: 32px;
     border: 1px solid #4c218b;
     border-radius: 50%;
-    color: #ffffff;
-    background: #fb2904;
+    background: #ffffff;
+    color: #fb2904;
 }
 
 .social-icons li a.active,
 .social-icons li a:hover {
     background: #ee4730;
     border-color: #ee4730;
+    color: white;
 }
 
 .section-header {
