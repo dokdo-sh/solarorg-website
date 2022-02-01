@@ -4309,7 +4309,7 @@ input[type="submit"] {
 }
 
 .counter-wrapper-3 .counter-item .counter-content .title span {
-    background: linear-gradient(-90deg, #e28d6f 0%, #e83b99 100%);
+    background: linear-gradient(-90deg, #e39351 0%, #f75c18 100%);
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -4319,7 +4319,7 @@ input[type="submit"] {
 }
 
 .counter-wrapper-3 .counter-item:nth-child(even) .title span {
-    background: linear-gradient(-90deg, #de3792 0%, #7f6be6 100%);
+    background: linear-gradient(-90deg, #e39351 0%, #f75c18 100%);
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     -webkit-background-clip: text;
