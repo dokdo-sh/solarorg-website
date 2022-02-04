@@ -18,17 +18,17 @@ router.get('/', function(req, res, next) {
 router.get('/about-solar', function(req, res, next) {
     res.render('about/about-solar', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
-/*
+
 router.get('/roadmap', function(req, res, next) {
-	res.render('about/roadmap', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
-});*/
+    res.render('about/roadmap', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+});
 
 router.get('/whitepaper', function(req, res, next) {
     res.render('about/whitepaper', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 /*
 router.get('/faq', function(req, res, next) {
-	res.render('about/faq', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+    res.render('about/faq', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });*/
 
 router.get('/privacy-policy', function(req, res, next) {
@@ -42,11 +42,11 @@ router.get('/desktop-wallet', function(req, res, next) {
 });
 /*
 router.get('/mobile-wallet', function(req, res, next) {
-	res.render('apps/mobile-wallet', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+    res.render('apps/mobile-wallet', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });*/
 /*
 router.get('/web-wallet', function(req, res, next) {
-	res.render('apps/web-wallet', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+    res.render('apps/web-wallet', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 */
 /* GET blockchain pages */
