@@ -7,6 +7,7 @@ const fs = require('fs');
 const multer = require('multer')
 const upload = multer({ dest: 'uploads/' })
 const { convert } = require('html-to-text');
+const Feed = require('feed').Feed;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -282,14 +283,155 @@ router.get('/blog/:blogid', async function(req, res, next) {
 
 });
 
-router.get('/rss', function(req, res, next) {
+router.get('/rss', async function(req, res, next) {
+
+    var db = req.app.get('db');
+
+	const feed = new Feed({
+	  title: "Solar News Feed",
+	  description: "News feed for the Solar project",
+	  id: "http://solar.network/",
+	  link: "http://solar.network/",
+	  language: "en", // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+	  image: "http://solar.network/assets/images/logo/logo2.png",
+	  favicon: "http://solar.network/assets/images/favicon.png",
+	  copyright: "All rights reserved 2022, Solar",
+	  updated: new Date(), // optional, default = today
+	  generator: "Solar Feed", // optional, default = 'Feed for Node.js'
+	  feedLinks: {
+		rss: "https://solar.network/rss",
+		json: "https://solar.network/json"
+	  },
+	  author: {
+		name: "Solar",
+		email: "blog@solar.network",
+		link: "https://solar.network/blog"
+	  }
+	});
+	
+	var posts = await db['blogPost'].find({status: 'Active'}).populate('user').sort({createdAt: -1}).limit(50);
+	
+	for (let i = 0; i < posts.length; i++)
+	{
+	
+		var thispost = posts[i];
+		
+		var textBody = convert(thispost.body);
+
+        var image = {};
+        try {
+            image = JSON.parse(thispost.headerImage);
+        } catch (e) {
+
+        }
+
+        var headerimage = "";
+
+        if (image.image != '') {
+            try {
+                headerimage = "data:" + image.contentType + ";base64," + image.image;
+            } catch (e) {
+
+            }
+        }
+        
+		feed.addItem({
+			title: thispost.title,
+			id: thispost._id,
+			link: "https://solar.network/blog/" + thispost._id,
+			description: textBody.substr(0,100),
+			content: thispost.body,
+			author: [
+			  {
+				name: thispost.user.displayName
+			  }
+			],
+			date: new Date(thispost.createdAt),
+			image: headerimage
+		});
+	
+	}
+	
+	res.header("Content-Type", "application/xml");
+	res.status(200).send(feed.rss2());
+
+
+});
+
+router.get('/json', async function(req, res, next) {
 
     var db = req.app.get('db');
 
 
-    //res.render('community', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
-});
+	const feed = new Feed({
+	  title: "Solar News Feed",
+	  description: "News feed for the Solar project",
+	  id: "http://solar.network/",
+	  link: "http://solar.network/",
+	  language: "en", // optional, used only in RSS 2.0, possible values: http://www.w3.org/TR/REC-html40/struct/dirlang.html#langcodes
+	  image: "http://solar.network/assets/images/logo/logo2.png",
+	  favicon: "http://solar.network/assets/images/favicon.png",
+	  copyright: "All rights reserved 2022, Solar",
+	  updated: new Date(), // optional, default = today
+	  generator: "Solar Feed", // optional, default = 'Feed for Node.js'
+	  feedLinks: {
+		rss: "https://solar.network/rss",
+		json: "https://solar.network/json"
+	  },
+	  author: {
+		name: "Solar",
+		email: "blog@solar.network",
+		link: "https://solar.network/blog"
+	  }
+	});
+	
+	var posts = await db['blogPost'].find({status: 'Active'}).populate('user').sort({createdAt: -1}).limit(50);
+	
+	for (let i = 0; i < posts.length; i++)
+	{
+	
+		var thispost = posts[i];
+		
+		var textBody = convert(thispost.body);
 
+        var image = {};
+        try {
+            image = JSON.parse(thispost.headerImage);
+        } catch (e) {
+
+        }
+
+        var headerimage = "";
+
+        if (image.image != '') {
+            try {
+                headerimage = "data:" + image.contentType + ";base64," + image.image;
+            } catch (e) {
+
+            }
+        }
+        
+		feed.addItem({
+			title: thispost.title,
+			id: thispost._id,
+			link: "https://solar.network/blog/" + thispost._id,
+			description: textBody.substr(0,100),
+			content: thispost.body,
+			author: [
+			  {
+				name: thispost.user.displayName
+			  }
+			],
+			date: new Date(thispost.createdAt),
+			image: headerimage
+		});
+	
+	}
+	
+	res.header("Content-Type", "application/json");
+	res.status(200).send(feed.json1());
+	
+});
 
 
 module.exports = router;
