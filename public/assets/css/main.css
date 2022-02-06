@@ -18083,3 +18083,7 @@ div[class*="col"]:nth-of-type(3n+3) .pricing-item-20 {
 .solar {
     color: #ed5c15!important;
 }
+
+.fa-check {
+    color: green;
+}
