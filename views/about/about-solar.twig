@@ -2,8 +2,6 @@
 
 <body data-spy="scroll" data-target="#mobile-wallet-menu" data-offset="150">
 
-
-
     {% include "/blocks/header.twig" %}
     <!--============= Header Section Ends Here =============-->
     <section class="banner-7 bg_img oh bottom_right" data-background="./assets/images/banner/banner-bg-7.jpg">
@@ -19,8 +17,6 @@
         </div>
     </section>
     <!---->
-
-
 
     <section class="about-section padding-top padding-bottom oh">
         <div class="container">
@@ -93,9 +89,25 @@
             </div>
         </div>
     </section>
+
     <!---->
     {% include "/blocks/footer.twig" %}
 
 
 </body>
+{% endblock %} {% block javascripts %}
+<script src="../assets/js/socket.io.slim.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        const socket = io();
+        socket.emit('getwallet', {
+            walletId: 'Sdao2USyAz9B6RBgZeFyNDePuQAxfzZZHE'
+        });
+        socket.on('showwallet', function(data) {
+            $('#balance').html(data.balance + ' SXP');
+            console.log(data)
+        });
+    });
+</script>
+
 {% endblock %}

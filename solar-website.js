@@ -15,6 +15,7 @@ const flash = require('connect-flash');
 const fs = require('fs');
 const ini = require('ini');
 const bodyParser = require("body-parser");
+const sxpApiHelper = require("@types/sxp-api-helper");
 
 const { encrypt, decrypt } = require('./helpers/cryptoFunctions');
 
@@ -27,23 +28,15 @@ const {
 const asyncv3 = require('async');
 
 mongoose.connect(iniConfig.mongo_connect);
-var db = require('./models/allSchema')(mongoose);
+const db = require('./models/allSchema')(mongoose);
 
-
-var indexRouter = require('./routes/index');
-
-var serverPort = 8787;
-
-var app = express();
-
-
-var server = http.createServer(app);
-
+const indexRouter = require('./routes/index');
+const serverPort = 8787;
+const app = express();
+const server = http.createServer(app);
 server.listen(serverPort);
 
-
-////
-// Web Stuff
+//// Web 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -91,4 +84,27 @@ app.use(function(err, req, res, next) {
     // render the error page
     res.status(err.status || 500);
     res.render('error');
+});
+
+//// sxpApiHelper
+const sxpApi = sxpApiHelper.sxpApi;
+const sxpapi = new sxpApi.default();
+
+//// Socket.io
+
+const io = require('socket.io').listen(server);
+
+io.on('connection', function(socket) {
+    /* sxp api */
+    socket.on('getwallet', function(input) {
+        (async() => {
+            response = await sxpapi.getWalletByID(input.walletId);
+            const data = (response.data);
+            const flatJson = {
+                balance: (parseFloat(data.balance) / 100000000).toFixed(2)
+            };
+            socket.emit('showwallet', flatJson);
+        })();
+
+    });
 });

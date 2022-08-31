@@ -36,6 +36,8 @@
         "uuid": "^3.3.2"
     },
     "devDependencies": {
-        "browser-sync": "^2.26.7"
+        "browser-sync": "^2.26.7",
+        "@types/socket.io": "^2.1.13",
+        "@types/sxp-api-helper": "git+https://github.com/dokdo-sh/sxp-api-helper.git"
     }
 }
