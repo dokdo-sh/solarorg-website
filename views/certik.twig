@@ -1,0 +1,30 @@
+{% extends 'layout.twig' %}
+<!---->
+{% block body %}
+
+<body>
+    <!---->
+    {% include "/blocks/header.twig" %}
+    <!---->
+    <section class="banner-7 bg_img oh bottom_right" data-background="./assets/images/banner/banner-bg-7.jpg">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <h2 class="mb-5 text-center">CertiK KYC verification</h2>
+                    <div class="section-header  coverage-header" style="max-width:fit-content;margin-bottom:25px;">
+                        <code>
+            {"publicKey":"02a8ba20d71737ebfb919c9bb22219795c7fc1e21c4b47609566714a4d2a57bad2","signature":"5807408d8de4cdb7a5feb9f5565293da7018a8bec0b31d377f9e3f56ea435b83081653312e4e013a470c7a851f040ab51a2629bb0efdc07bd7f7c00ad475e2b5","message":"
+            This domain is owned by Nayiem Willems, CEO of the Solar Blockchain Foundation. This signed message is part of the KYC
+            verfication for CertiK. This page is visible at https://solar.org/certik"}
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!---->
+    {% include "/blocks/footer.twig" %}
+</body>
+{% endblock %}

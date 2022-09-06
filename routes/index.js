@@ -70,6 +70,12 @@ router.get('/community', function(req, res, next) {
     res.render('community', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
+/* GET CertiK */
+
+router.get('/certik', function(req, res, next) {
+    res.render('certik', { title: 'CertiK verification', csrfToken: req.csrfToken(), sessionId: req.session.id });
+});
+
 /* GET blog page */
 
 router.get('/login', function(req, res, next) {
