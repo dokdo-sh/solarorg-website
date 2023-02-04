@@ -50,10 +50,9 @@ router.get('/stats', function(req, res, next) {
     res.render('stats', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
-/* GET swap page */
+/* GET exchanges page */
 
-router.get('/swap', function(req, res, next) {
-    res.render('swap', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+router.get('/exchanges', function(req, res, next) {
+    res.render('exchanges', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
-
 module.exports = router;
