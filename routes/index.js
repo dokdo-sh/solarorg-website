@@ -32,6 +32,10 @@ router.get('/wallets', function(req, res, next) {
     res.render('wallets', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
+router.get('/solarcard', function(req, res, next) {
+    res.render('solarcard', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+});
+
 /* GET blockchain pages */
 
 router.get('/core', function(req, res, next) {
