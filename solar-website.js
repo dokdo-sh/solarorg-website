@@ -8,21 +8,16 @@ const logger = require('morgan');
 const request = require('request');
 const session = require('express-session')
 const csrf = require('csurf')
-const flatten = require('flat')
-const uuidv4 = require('uuid/v4');
-const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const fs = require('fs');
 const bodyParser = require("body-parser");
 const sxpApiHelper = require("@types/sxp-api-helper");
-const asyncv3 = require('async');
 const indexRouter = require('./routes/index');
 const app = express();
 const server = http.createServer(app);
-const got = require('got'); // got@11
-const CoinGecko = require('coingecko-api');
-const CoinGeckoClient = new CoinGecko();
-
+const config = require('config')
+const port = config.get('server.port');
+const secret = config.get('server.secret')
 
 const {
     promisify
@@ -41,7 +36,7 @@ app.use(express.urlencoded({
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
-    secret: 'justsomerandomness1234',
+    secret: secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -68,7 +63,7 @@ app.use(function(err, req, res, next) {
     res.render('error');
 });
 
-server.listen(8795);
+server.listen(port);
 
 const Blockchains = {
     byChainId: (chainId) => { if (chainId == 1) { return Blockchains.Ethereum } else { return Blockchains.BSC } },

@@ -11,4 +11,6 @@ db/
 .package.json
 
 # Config file
-config.ini
+config/default.json
+
+

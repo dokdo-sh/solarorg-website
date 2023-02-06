@@ -16,6 +16,7 @@
     "bootstrap": "^5.2.1",
     "bufferutil": "^4.0.1",
     "coingecko-api": "^1.0.10",
+    "config": "^3.3.9",
     "connect-flash": "^0.1.1",
     "cookie-consent-js": "^1.6.7",
     "cookie-parser": "~1.4.4",
