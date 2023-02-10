@@ -42,8 +42,8 @@ router.get('/core', function(req, res, next) {
     res.render('core', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
-router.get('/staking', function(req, res, next) {
-    res.render('staking', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+router.get('/voting', function(req, res, next) {
+    res.render('voting', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
 router.get('/stats', function(req, res, next) {
