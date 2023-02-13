@@ -54,3 +54,5 @@ const getAllTransactions = async (stopOn) => {
 function loadMainnetData() {
     JSON.parse(fs.readFileSync(`data/mainnet.json`))
 }
+
+getAllTransactions();
