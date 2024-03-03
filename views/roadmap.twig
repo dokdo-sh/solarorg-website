@@ -27,106 +27,235 @@
         <img src="assets/images/solar/roadmap.png" class="" style="width:100%" alt="">
         <!--end container-->
     </section>
-    <!--
-    <section style="margin-top:25px;">
+    <section style="margin-top:25px;margin-bottom:25px;">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="component-wrapper rounded shadow">
                         <div class="p-4 border-bottom">
-                            <h5 class="title mb-0 text-center">Roadmap</h5>
-                            <p class="text-muted para-desc mb-0 mx-auto text-center">text about roadmap
+                            <h5 class="title mb-0 text-center">Solar Core 5.0</h5>
+                            <p class="text-muted para-desc mb-0 mx-auto text-center">
+                                The upcoming release of Solar Core 5.0 will mark the introduction of a large number of new features and improvements, of which the most significant have been included in this section. This covers not only a new consensus model and the Solar Virtual Machine
+                                (SVM) but also username registration, permissioned keys, and node management.
                             </p>
                         </div>
 
-                        
                         <div class="p-4">
-                            <div class="accordion" id="buyingquestion">
+                            <div class="accordion" id="roadmapAccordion">
                                 <div class="accordion-item rounded">
                                     <h2 class="accordion-header" id="headingOne">
-                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                            roadmap item
-                                        </button>
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneContainer1" aria-expanded="false" aria-controls="collapseOneContainer1">
+                                        Consensus
+                                    </button>
                                     </h2>
-                                    <div id="collapseOne" class="accordion-collapse border-0 collapse" aria-labelledby="headingOne" data-bs-parent="#buyingquestion" style="">
+                                    <div id="collapseOneContainer1" class="accordion-collapse border-0 collapse" aria-labelledby="headingOne" data-bs-parent="#roadmapAccordion" style="">
                                         <div class="accordion-body text-muted">
-                                            text
+                                            Solar Core 5.0 introduces a Byzantine Fault Tolerance (BFT) consensus model, offering a robust solution for reaching consensus across dispersed nodes, even in the presence of faulty or malicious activities. Our consensus mechanism, combined with aggregated
+                                            Boneh-Lynn-Schacham (BLS) signatures, ensures immediate block finality and fosters a fully fork-resistant network. Enhanced security and reliability are achieved by allowing block producers to run multiple nodes
+                                            simultaneously, selecting only online block producers at the start of each round, ensuring optimal uptime and network reliability.
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="accordion-item rounded mt-2">
                                     <h2 class="accordion-header" id="headingTwo">
-                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            roadmap item
-                                        </button>
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoContainer1" aria-expanded="false" aria-controls="collapseTwoContainer1">
+                                        Solar Virtual Machine (SVM)
+                                    </button>
                                     </h2>
-                                    <div id="collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="headingTwo" data-bs-parent="#buyingquestion" style="">
+                                    <div id="collapseTwoContainer1" class="accordion-collapse border-0 collapse" aria-labelledby="headingTwo" data-bs-parent="#roadmapAccordion" style="">
                                         <div class="accordion-body text-muted">
-                                            text
+                                            Solar is building the Solar Virtual Machine (SVM), inspired by the Ethereum Virtual Machine, but optimised for integration with Solar Core. The design and implementation of SVM will ensure compatibility with popular tools in the Ethereum ecosystem including
+                                            MetaMask, the Solidity smart contract programming language, and Solidity developer toolkits.
+
+                                            <br><br> The SVM development roadmap consists of:<br> 1. Defining requirements and performing feasibility studies (Done)<br> 2. Developing a proof of concept (Done)<br> 3. Refining the proof of concept into
+                                            a product (In Progress)<br> 4. Integrating SVM into Solar Core<br> 5. Robust testing for correctness and security<br> 6. Public Testnet release<br>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="accordion-item rounded mt-2">
                                     <h2 class="accordion-header" id="headingThree">
-                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            roadmap item
-                                        </button>
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeContainer1" aria-expanded="false" aria-controls="collapseThreeContainer1">
+                                        Permissioned Keys
+                                    </button>
                                     </h2>
-                                    <div id="collapseThree" class="accordion-collapse border-0 collapse" aria-labelledby="headingThree" data-bs-parent="#buyingquestion" style="">
+                                    <div id="collapseThreeContainer1" class="accordion-collapse border-0 collapse" aria-labelledby="headingThree" data-bs-parent="#roadmapAccordion" style="">
                                         <div class="accordion-body text-muted">
-                                            text
+                                            Introduces permissioned keys, enhancing security by enabling specific functionalities without using the master mnemonic that generated your wallet. Users can register multiple permissioned keys, each tied to a distinct mnemonic for specific functionalities
+                                            like transferring a predetermined amount of SXP or updating the wallet's vote. This gives users the flexibility to share access to their wallet with set parameters, like allowing a friend to use a specific amount
+                                            of funds. The master mnemonic retains full functionality and can still be used for transactions if an extra (non-permissioned) mnemonic is registered.
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="accordion-item rounded mt-2">
                                     <h2 class="accordion-header" id="headingFour">
-                                        <button class="accordion-button border-0 bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                            roadmap item
-                                        </button>
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourContainer1" aria-expanded="true" aria-controls="collapseFourContainer1">
+                                        Username Registration
+                                    </button>
                                     </h2>
-                                    <div id="collapseFour" class="accordion-collapse border-0 collapse show" aria-labelledby="headingFour" data-bs-parent="#buyingquestion" style="">
+                                    <div id="collapseFourContainer1" class="accordion-collapse border-0 collapse" aria-labelledby="headingFour" data-bs-parent="#roadmapAccordion" style="">
                                         <div class="accordion-body text-muted">
-                                            text
+                                            Solar Core 5.0 allows users to register usernames without mandatory block producer status, although existing usernames will retain their functionality as block producers. This feature lets users store additional metadata like avatars and biographies and
+                                            enables easier transactions through human-readable account names instead of full blockchain addresses. Furthermore, usernames can have various applications, from domain names for personal or corporate websites
+                                            to encrypted messaging apps and cross-chain support. This feature enhances Solar Core's power, accessibility, and user experience in blockchain applications.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item rounded mt-2">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFiveContainer1" aria-expanded="true" aria-controls="collapseFiveContainer1">
+                                        Node Management
+                                    </button>
+                                    </h2>
+                                    <div id="collapseFiveContainer1" class="accordion-collapse border-0 collapse" aria-labelledby="headingFive" data-bs-parent="#roadmapAccordion" style="">
+                                        <div class="accordion-body text-muted">
+                                            Solar Core 5.0 offers enhancements for node operators, boosting security and reliability with new or updated features. It minimises footprint by switching to SQLite3 from PostgreSQL, enhancing performance. Node management becomes more straightforward
+                                            due to an improved interface. Increased security is provided through the ability to operate with all ports closed and by default, the Public API is disabled. Also, plugins are only functional on relay (non-block
+                                            producer) nodes. These changes promise a more secure, reliable, and user-friendly experience for all Solar Core node operators.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item rounded mt-2">
+                                    <h2 class="accordion-header" id="headingSix">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSixContainer1" aria-expanded="true" aria-controls="collapseSixContainer1">
+                                        Wallets
+                                    </button>
+                                    </h2>
+                                    <div id="collapseSixContainer1" class="accordion-collapse border-0 collapse" aria-labelledby="headingSix" data-bs-parent="#roadmapAccordion" style="">
+                                        <div class="accordion-body text-muted">
+                                            The Solar Wallet, the principal tool for interacting with the Solar blockchain is set to evolve beyond its basic functionalities such as sending/receiving SXP coins and voting for block producers. New desktop and mobile wallets are in development, which
+                                            will enhance user interaction with features like token creation, smart contract interaction, and blockchain monitoring tools. A crucial improvement will arrive with the Solar Core 5.0 release, enabling compatibility
+                                            with MetaMask or any other ERC20/EVM compatible wallets, thereby significantly enhancing adaptability and user convenience within the Solar blockchain ecosystem.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item rounded mt-2">
+                                    <h2 class="accordion-header" id="headingSeven">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSevenContainer1" aria-expanded="true" aria-controls="collapseSevenContainer1">
+                                        Documentation and SDK
+                                    </button>
+                                    </h2>
+                                    <div id="collapseSevenContainer1" class="accordion-collapse border-0 collapse" aria-labelledby="headingSeven" data-bs-parent="#roadmapAccordion" style="">
+                                        <div class="accordion-body text-muted">
+                                            Solar is committed to assisting developers in kick-starting their projects on the Solar blockchain by providing a dedicated documentation suite and Software Development Kits (SDKs). Initially, support will be offered for TypeScript, JavaScript, Python,
+                                            and Solidity, with additional programming language support to be added over time, as needed or desired. The documentation suite will continue to evolve as new features or implementations are added to the Solar
+                                            blockchain. Users can interact with the blockchain through the Public API and/or WebSocket API. The dedicated Solar documentation suite can be accessed at: <a href="https://docs.solar.org"
+                                                target="_blank">https://docs.solar.org</a>.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item rounded mt-2">
+                                    <h2 class="accordion-header" id="headingEight">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEightContainer1" aria-expanded="true" aria-controls="collapseEightContainer1">
+                                        Solarscan
+                                    </button>
+                                    </h2>
+                                    <div id="collapseEightContainer1" class="accordion-collapse border-0 collapse" aria-labelledby="headingEight" data-bs-parent="#roadmapAccordion" style="">
+                                        <div class="accordion-body text-muted">
+                                            Solarscan, a cutting-edge block explorer designed for the Solar ecosystem, offers a dynamic way to track transactions, monitor network health in real time, and stay updated on the latest blocks. The tool will continuously evolve alongside Solar Core 5.0,
+                                            offering a personalised wallet view of mainnet and testnet blockchains with real-time data updates. Endorsed by block producers, Solarscan's user-friendly interface and robust build are expected to enhance Solar's
+                                            position among the large third-generation blockchains. Despite its seamless integration and popularity, Solarscan is an independent tool not produced by the Solar Blockchain Foundation, and its data should not
+                                            be construed as endorsed or promoted by the Foundation.
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                       
                     </div>
                 </div>
             </div>
         </div>
-    </section>-->
-    <section class="section bg-light">
+
         <div class="container">
-            <div class="row align-items-end">
-                <div class="col-lg-12 col-md-12 col-12 text-center">
-                    <div class="section-title">
-                        <h4 class="title title-dark mb-4">Roadmap</h4>
-                        <p class=" mb-0">We have received feedback from the entity that acquired Swipe after publishing the <a href="https://coinmarketcap.com/community/articles/38833" target="_blank" name="external" onclick="confirmExit(this.name)"> Q3-2022 blog article</a>.<br>                            The feedback has led us to making several unexpected changes and improvements to the Solar whitepaper and roadmap.<br> The changes and improvements will be presented to and reviewed by the entity that acquired the Swipe card
-                            business.
-                            <br> We aim to release the new whitepaper and roadmap as soon as possible.<br>
-                            <br> Until then, we will continue to focus on the items mentioned in the first Solar whitepaper and roadmap.<br> For transparency, the original whitepaper and roadmap will remain visible from the V1 website. <br> Click on the
-                            button below to view the V1 website.
-                        </p>
-                    </div>
-                    <div class="mt-4">
-                        <a href="https://v1.solar.org/roadmap" target="_blank" class="btn btn-primary">View V1 Roadmap
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-arrow-right fea icon-sm">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg></a>
+            <div class="row">
+                <div class="col-12">
+                    <div class="component-wrapper rounded shadow">
+                        <div class="p-4 border-bottom">
+                            <h5 class="title mb-0 text-center">Dokdo</h5>
+                            <p class="text-muted para-desc mb-0 mx-auto text-center">
+                                Dokdo, an independent entity focused on the Solar ecosystem, offers a diverse portfolio of products including Solar Debit Cards, District 53, tymt, and moon.store. These innovative solutions contribute to the dynamic evolution of the Solar ecosystem.
+                                While detailed specifications of Dokdo and its offerings are confidential to maintain operational integrity and security, you can find more information about Dokdo's vision, products, and strategy in their whitepaper at
+                                <a href="https://dokdo.sh" target="_blank">https://dokdo.sh</a>.
+                            </p>
+                        </div>
+
+                        <div class="p-4">
+                            <div class="accordion" id="dokdoAccordion">
+                                <div class="accordion-item rounded">
+                                    <h2 class="accordion-header" id="headingOneContainer2">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneContainer2" aria-expanded="false" aria-controls="collapseOneContainer2">
+                                        District 53
+                                    </button>
+                                    </h2>
+                                    <div id="collapseOneContainer2" class="accordion-collapse border-0 collapse" aria-labelledby="headingOneContainer2" data-bs-parent="#dokdoAccordion" style="">
+                                        <div class="accordion-body text-muted">
+                                            District 53, a product of Dokdo, is a unique metaverse offering land ownership, in-game activities, advertising opportunities, and income possibilities. Users can purchase virtual land via auction, receiving it as an NFT linked to their wallet address.
+                                            Beyond owning land, District 53 hosts mini-games that provide earning opportunities, and allows for advertisements, enabling a virtual economy. Future updates, including improved graphics, VR development, and
+                                            daily play-to-earn activities, are on the roadmap. Although District 53 has SXP burning and in-game transactions, these are managed by Dokdo, independent of the Solar Blockchain Foundation.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item rounded mt-2">
+                                    <h2 class="accordion-header" id="headingTwoContainer2">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoContainer2" aria-expanded="false" aria-controls="collapseTwoContainer2">
+                                        tymt
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTwoContainer2" class="accordion-collapse border-0 collapse" aria-labelledby="headingTwoContainer2" data-bs-parent="#dokdoAccordion" style="">
+                                        <div class="accordion-body text-muted">
+                                            Dokdo has developed tymt, a game launcher aimed at revolutionizing the gaming industry by bridging traditional, blockchain, and Web3 games. This solution addresses industry-wide challenges like resistance to crypto transactions or NFTs and high platform
+                                            fees. Tymt supports various projects, including those on Ethereum, Binance Smart Chain, Solana, and others. It's designed to be platform-agnostic and prioritises user privacy, allowing account creation with
+                                            non-custodial wallet addresses and secure transactions without personal data disclosure. Future developments are planned following the release of Solar Core 5.0.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item rounded mt-2">
+                                    <h2 class="accordion-header" id="headingThreeContainer2">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThreeContainer2" aria-expanded="false" aria-controls="collapseThreeContainer2">
+                                        Solar Card
+                                    </button>
+                                    </h2>
+                                    <div id="collapseThreeContainer2" class="accordion-collapse border-0 collapse" aria-labelledby="headingThreeContainer2" data-bs-parent="#dokdoAccordion" style="">
+                                        <div class="accordion-body text-muted">
+                                            In partnership with several 3rd parties, Dokdo is introducing the Solar Debit Card, a new development that enhances the utility of the Solar ecosystem. The card facilitates both crypto and fiat transactions and offers features like IBAN accounts, low
+                                            fees, high card load limits, and support for multiple currencies. It also enables users to buy and sell crypto, pay for goods and services globally, withdraw cash from ATMs, and access concierge services and
+                                            discounts. Specific details regarding the Solar Debit Card will be provided by Dokdo in their upcoming whitepaper to ensure regulatory compliance.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item rounded mt-2">
+                                    <h2 class="accordion-header" id="headingFourContainer2">
+                                        <button class="accordion-button border-0 bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourContainer2" aria-expanded="true" aria-controls="collapseFourContainer2">
+                                        moon.store
+                                    </button>
+                                    </h2>
+                                    <div id="collapseFourContainer2" class="accordion-collapse border-0 collapse" aria-labelledby="headingFourContainer2" data-bs-parent="#dokdoAccordion" style="">
+                                        <div class="accordion-body text-muted">
+                                            moon.store is an e-commerce platform by Dokdo that incorporates the Solar Blockchain into daily transactions. Users can purchase a broad variety of merchandise using SXP. The platform is named agnostically, intending to appeal to a broad ecosystem of
+                                            users and not just the Solar community. Other projects can list their custom merchandise on the platform for a small fee paid in SXP. This approach promotes a wider user base to use SXP, expanding its ecosystem.
+                                            Dokdo plans to continually expand the product offerings on moon.store, representing an innovative blend of e-commerce and cryptocurrency.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </section>
+
+
 </body>
 
 {% endblock %}
