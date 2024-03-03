@@ -226,12 +226,12 @@
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="section-title">
-                    <h4 class="title title-dark mb-4">Follow us on Coinmarketcap and Coingecko</h4>
+                    <h4 class="title title-dark mb-4">Swap to SXP in just minutes!</h4>
                 </div>
-                <div class="mt-4">
-                    <a href="https://coinmarketcap.com/currencies/sxp/" target="_blank" name="external" onclick="confirmExit(this.name)" class="btn btn-primary">Coinmarketcap</a>
-                    <a href="https://coingecko.com/en/coins/sxp" target="_blank" name="external" onclick="confirmExit(this.name)" class="btn btn-primary">Coingecko</a>
-                </div>
+                <iframe id='iframe-widget' src='https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=true&amount=0.002&amountFiat=50&backgroundColor=3E4A59&darkMode=true&from=btc&fromFiat=eur&horizontal=true&isFiat&lang=en-US&link_id=7d056665144bb3&locales=true&logo=false&primaryColor=ED5C15&to=sxpmainnet&toFiat=sxpmainnet&toTheMoon=true'
+                    style="height: 205px; width: 100%; border: none"></iframe>
+
+                <p>Exchange services provided by ChangeNOW</p>
             </div>
         </div>
     </section>
@@ -289,5 +289,5 @@
         </div>
     </section>
 </body>
-
+<script defer type='text/javascript' src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
 {% endblock %}

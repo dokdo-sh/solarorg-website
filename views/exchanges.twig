@@ -21,11 +21,24 @@
         </div>
     </section>
     <!---->
-    <div class="row">
+    <section class="section bg-light">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="section-title">
+                    <h4 class="title title-dark mb-4">Swap to SXP in just minutes!</h4>
+                </div>
+                <iframe id='iframe-widget' src='https://changenow.io/embeds/exchange-widget/v2/widget.html?FAQ=true&amount=0.002&amountFiat=50&backgroundColor=3E4A59&darkMode=true&from=btc&fromFiat=eur&horizontal=true&isFiat&lang=en-US&link_id=7d056665144bb3&locales=true&logo=false&primaryColor=ED5C15&to=sxpmainnet&toFiat=sxpmainnet&toTheMoon=true'
+                    style="height: 205px; width: 100%; border: none"></iframe>
+
+                <p>Exchange services provided by ChangeNOW</p>
+            </div>
+        </div>
+    </section>
+    <div class="row" style="margin-top:50px;">
         <div class="col-12">
             <div class="section-title mb-4 pb-2 text-center">
                 <h4 class="title mb-4">Exchange Support</h4>
-                <p class=" text-muted mb-0 text-center">Below you will find an overview and status of exchanges migrating to mainnet.
+                <p class=" text-muted mb-0 text-center">Below you will find an overview and status of exchanges that support SXP mainnet.
                 </p>
             </div>
         </div>
@@ -41,212 +54,120 @@
                                     <tr>
                                         <th scope="col" class="border-bottom">Exchange</th>
                                         <th scope="col" class="border-bottom">Mainnet</th>
-                                        <th scope="col" class="border-bottom">ERC20 (deprecated)</th>
-                                        <th scope="col" class="border-bottom">BEP20 (deprecated)</th>
-                                        <th scope="col" class="border-bottom">BEP-2 (deprecated)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr style="border-top:2px solid #999999;">
                                         <tr>
-                                            <td>Bitay</td>
-                                            <td><span class="badge bg-warning me-2 mt-2">Migrating</span></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
                                             <td><a href="https://www.bibox.com/zh/exchange/basic/SXP_USDT" target="_blank" name="external" onclick="confirmExit(this.name)">Bibox</a></td>
                                             <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.binance.com/en/trade/SXP_USDT?ref=40896146" target="_blank" name="external" onclick="confirmExit(this.name)">Binance</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="https://www.bitget.com/en/spot/SXPUSDT_SPBL?type=spot" target="_blank" name="external" onclick="confirmExit(this.name)">Bitget</a></td>
                                             <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="https://www.bithumb.com/trade/order/SXP_KRW" target="_blank" name="external" onclick="confirmExit(this.name)">Bithumb</a></td>
                                             <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
                                         </tr>
                                         <tr>
                                             <td><a href="https://www.bitmart.com/trade/en?symbol=SXP_USDT" target="_blank" name="external" onclick="confirmExit(this.name)">Bitmart</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://changenow.io/currencies/solar-network" target="_blank" name="external" onclick="confirmExit(this.name)">ChangeNOW</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://coinone.co.kr/exchange/trade/sxp/krw" target="_blank" name="external" onclick="confirmExit(this.name)">Coinone</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Deepcoin</td>
-                                            <td><span class="badge bg-warning me-2 mt-2">Pending</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://gate.io/trade/sxp_usdt" target="_blank" name="external" onclick="confirmExit(this.name)">Gate.io</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://www.hotbit.io/exchange?symbol=SXP_USDT" target="_blank" name="external" onclick="confirmExit(this.name)">Hotbit</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://www.huobi.com/en-us/exchange/sxp_usdt" target="_blank" name="external" onclick="confirmExit(this.name)">Huobi</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://www.jbex.com/exchange/SXP2/USDT" target="_blank" name="external" onclick="confirmExit(this.name)">Jubi</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://www.kucoin.com/trade/SXP-BTC" target="_blank" name="external" onclick="confirmExit(this.name)">Kucoin</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://www.lbank.info/exchange/sxp/usdt" target="_blank" name="external" onclick="confirmExit(this.name)">Lbank</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-
-                                        <tr>
-                                            <td><a href="https://www.mexc.com/exchange/SXP_USDT" target="_blank" name="external" onclick="confirmExit(this.name)">MEXC</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://simpleswap.io/coins/sxp" target="_blank" name="external" onclick="confirmExit(this.name)">SimpleSwap</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://stealthex.io/coin/solar/" target="_blank" name="external" onclick="confirmExit(this.name)">StealthEX</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://upbit.com/exchange?code=CRIX.UPBIT.KRW-SXP" target="_blank" name="external" onclick="confirmExit(this.name)">Upbit</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td><a href="https://whitebit.com/trade/SXP-USDT" target="_blank" name="external" onclick="confirmExit(this.name)">Whitebit</a></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-
-                                        <tr style="border-top: 2px solid #999999;">
-                                            <td>Binance</td>
-                                            <td><span class="badge bg-warning me-2 mt-2">Pending</span></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
                                             <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
                                         </tr>
                                         <tr>
                                             <td>Bitstamp</td>
                                             <td><span class="badge bg-warning me-2 mt-2">Pending</span></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
                                         </tr>
                                         <tr>
-                                            <td>Bittrex</td>
-                                            <td><span class="badge bg-warning me-2 mt-2">Pending</span></td>
+                                            <td><a href="https://changenow.io/currencies/solar-network" target="_blank" name="external" onclick="confirmExit(this.name)">ChangeNOW</a></td>
                                             <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.coinex.com/exchange/SXP-USDT" target="_blank" name="external" onclick="confirmExit(this.name)">CoinEx</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://coinmerce.io/en/solar/" target="_blank" name="external" onclick="confirmExit(this.name)">Coinmerce</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://coinone.co.kr/exchange/trade/sxp/krw" target="_blank" name="external" onclick="confirmExit(this.name)">Coinone</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://exolix.com/" target="_blank" name="external" onclick="confirmExit(this.name)">Exolix</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://gate.io/trade/sxp_usdt" target="_blank" name="external" onclick="confirmExit(this.name)">Gate.io</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://hitbtc.com/sxp-to-usdt" target="_blank" name="external" onclick="confirmExit(this.name)">HitBTC</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.htx.com/en-us/trade/sxp_usdt" target="_blank" name="external" onclick="confirmExit(this.name)">HTX</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.huobi.com/en-us/exchange/sxp_usdt" target="_blank" name="external" onclick="confirmExit(this.name)">Huobi</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.jbex.com/exchange/SXP2/USDT" target="_blank" name="external" onclick="confirmExit(this.name)">Jubi</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.kucoin.com/trade/SXP-BTC" target="_blank" name="external" onclick="confirmExit(this.name)">Kucoin</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://www.lbank.info/exchange/sxp/usdt" target="_blank" name="external" onclick="confirmExit(this.name)">Lbank</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
                                         </tr>
 
                                         <tr>
-                                            <td>HitBTC</td>
-                                            <td><span class="badge bg-warning me-2 mt-2">Pending</span></td>
+                                            <td><a href="https://www.mexc.com/exchange/SXP_USDT" target="_blank" name="external" onclick="confirmExit(this.name)">MEXC</a></td>
                                             <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://poloniex.com/trade/SXP_USDT?type=spot" target="_blank" name="external" onclick="confirmExit(this.name)">Poloniex</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://simpleswap.io/coins/sxp" target="_blank" name="external" onclick="confirmExit(this.name)">SimpleSwap</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://stealthex.io/coin/solar/" target="_blank" name="external" onclick="confirmExit(this.name)">StealthEX</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://upbit.com/exchange?code=CRIX.UPBIT.KRW-SXP" target="_blank" name="external" onclick="confirmExit(this.name)">Upbit</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><a href="https://whitebit.com/trade/SXP-USDT" target="_blank" name="external" onclick="confirmExit(this.name)">Whitebit</a></td>
+                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
                                         </tr>
 
-                                        <tr>
-                                            <td>Kraken</td>
-                                            <td><span class="badge bg-warning me-2 mt-2">Pending</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Poloniex</td>
-                                            <td><span class="badge bg-warning me-2 mt-2">Pending</span></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Probit</td>
-                                            <td><span class="badge bg-warning me-2 mt-2">Pending</span></td>
-                                            <td><span class="badge bg-success me-2 mt-2">Supported</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                            <td><span class="badge bg-secondary me-2 mt-2">No</span></td>
-                                        </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <span class="mt-2"> Market data provided by Coingecko</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
 {% endblock %}
 <!---->
 {% block javascripts %}
+<script defer type='text/javascript' src='https://changenow.io/embeds/exchange-widget/v2/stepper-connector.js'></script>
 <!---->
 {% endblock %}

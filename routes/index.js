@@ -32,10 +32,10 @@ router.get('/wallets', function(req, res, next) {
     res.render('wallets', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
+// SolarCard
 router.get('/solarcard', function(req, res, next) {
-    res.render('solarcard', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
+    res.redirect('https://solar.network/solarcard');
 });
-
 /* GET blockchain pages */
 
 router.get('/core', function(req, res, next) {
@@ -44,10 +44,6 @@ router.get('/core', function(req, res, next) {
 
 router.get('/voting', function(req, res, next) {
     res.render('voting', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
-});
-
-router.get('/stats', function(req, res, next) {
-    res.render('stats', { title: 'Solar', csrfToken: req.csrfToken(), sessionId: req.session.id });
 });
 
 /* GET exchanges page */
