@@ -93,56 +93,56 @@ server.listen(port);
 
 //// Socket.io
 
-// const io = require('socket.io').listen(server);
+const io = require('socket.io').listen(server);
 
-// //// sxpApiHelper
-// const sxpApi = sxpApiHelper.sxpApi;
-// const sxpapi = new sxpApi.default();
+//// sxpApiHelper
+const sxpApi = sxpApiHelper.sxpApi;
+const sxpapi = new sxpApi.default();
 
-// io.on('connection', function(socket) {
+io.on('connection', function(socket) {
 
-//     socket.on('getTxStats', function(input) {
-//         (async() => {
-//             socket.emit('showTxStats', JSON.parse(fs.readFileSync(`data/mainnet.json`)))
-//         })()
-//     });
+    socket.on('getTxStats', function(input) {
+        (async() => {
+            socket.emit('showTxStats', JSON.parse(fs.readFileSync(`data/mainnet.json`)))
+        })()
+    });
 
 
-//     /* sxp api */
+    /* sxp api */
 
-//     socket.on('getwallet', function(input) {
-//         (async() => {
-//             let response = await sxpapi.getWalletByID(input.walletId);
-//             const data = (response.data);
-//             const flatJson = {
-//                 balance: (parseFloat(data.balance) / 100000000).toFixed(2)
-//             };
-//             socket.emit('showwallet', flatJson);
-//         })();
+    socket.on('getwallet', function(input) {
+        (async() => {
+            let response = await sxpapi.getWalletByID(input.walletId);
+            const data = (response.data);
+            const flatJson = {
+                balance: (parseFloat(data.balance) / 100000000).toFixed(2)
+            };
+            socket.emit('showwallet', flatJson);
+        })();
 
-//     });
+    });
 
-//     socket.on('getWalletSent', function(input) {
+    socket.on('getWalletSent', function(input) {
 
-//         (async() => {
-//             let response = await sxpapi.getWalletSentTransactions(input.walletId);
+        (async() => {
+            let response = await sxpapi.getWalletSentTransactions(input.walletId);
 
-//             const data = (response.data);
-//             const flatJson = [];
+            const data = (response.data);
+            const flatJson = [];
 
-//             for (let i = 0; i < data.length; i++) {
-//                 let tempJson = {
-//                     nonce: data[i].nonce,
-//                     recipient: data[i].recipient ? data[i].recipient : data[i].asset.transfers ? data[i].asset.transfers.length > 1 ? `${data[i].asset.transfers.length} recipients` : `${data[i].asset.transfers[0].recipientId}` : "Other",
-//                     memo: data[i].memo == undefined ? '<span>-</span>' : data[i].memo,
-//                     amount: data[i].amount,
-//                     id: data[i].id,
-//                     timestamp: data[i].timestamp.human
-//                 };
-//                 flatJson.push(tempJson);
-//             }
-//             socket.emit('showWalletSent', flatJson);
-//         })();
+            for (let i = 0; i < data.length; i++) {
+                let tempJson = {
+                    nonce: data[i].nonce,
+                    recipient: data[i].recipient ? data[i].recipient : data[i].asset.transfers ? data[i].asset.transfers.length > 1 ? `${data[i].asset.transfers.length} recipients` : `${data[i].asset.transfers[0].recipientId}` : "Other",
+                    memo: data[i].memo == undefined ? '<span>-</span>' : data[i].memo,
+                    amount: data[i].amount,
+                    id: data[i].id,
+                    timestamp: data[i].timestamp.human
+                };
+                flatJson.push(tempJson);
+            }
+            socket.emit('showWalletSent', flatJson);
+        })();
 
-//     });
-// });
+    });
+});
