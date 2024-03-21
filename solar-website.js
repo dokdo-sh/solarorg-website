@@ -17,11 +17,31 @@ const app = express();
 const server = http.createServer(app);
 const config = require('config')
 const port = config.get('server.port');
-const secret = config.get('server.secret')
+const secret = config.get('server.secret');
+
+var i18next = require('i18next');
+var FsBackend = require('i18next-node-fs-backend');
+var middleware = require('i18next-express-middleware');
+i18next
+  .use(FsBackend)
+  .init({
+    lng: 'en',
+    ns: ['en', 'de'],
+    defaultNS: 'en',
+    saveMissing: false,
+    debug: false,
+    backend: {
+      loadPath: __dirname + '/locales/{{ns}}.json'
+    },
+    nsSeparator: '#||#',
+    keySeparator: '#|#'
+  })
+
 
 const {
     promisify
 } = require('util');
+
 const { response } = require('express');
 
 // view engine setup
@@ -35,6 +55,12 @@ app.use(express.urlencoded({
 }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// app.use(i18nextMiddleware.handle(i18next));
+app.use(middleware.handle(i18next, {
+    // ignoreRoutes: ["/foo"],
+    // removeLngFromUrl: false
+}));
 app.use(session({
     secret: secret,
     resave: false,
@@ -67,56 +93,56 @@ server.listen(port);
 
 //// Socket.io
 
-const io = require('socket.io').listen(server);
+// const io = require('socket.io').listen(server);
 
-//// sxpApiHelper
-const sxpApi = sxpApiHelper.sxpApi;
-const sxpapi = new sxpApi.default();
+// //// sxpApiHelper
+// const sxpApi = sxpApiHelper.sxpApi;
+// const sxpapi = new sxpApi.default();
 
-io.on('connection', function(socket) {
+// io.on('connection', function(socket) {
 
-    socket.on('getTxStats', function(input) {
-        (async() => {
-            socket.emit('showTxStats', JSON.parse(fs.readFileSync(`data/mainnet.json`)))
-        })()
-    });
+//     socket.on('getTxStats', function(input) {
+//         (async() => {
+//             socket.emit('showTxStats', JSON.parse(fs.readFileSync(`data/mainnet.json`)))
+//         })()
+//     });
 
 
-    /* sxp api */
+//     /* sxp api */
 
-    socket.on('getwallet', function(input) {
-        (async() => {
-            let response = await sxpapi.getWalletByID(input.walletId);
-            const data = (response.data);
-            const flatJson = {
-                balance: (parseFloat(data.balance) / 100000000).toFixed(2)
-            };
-            socket.emit('showwallet', flatJson);
-        })();
+//     socket.on('getwallet', function(input) {
+//         (async() => {
+//             let response = await sxpapi.getWalletByID(input.walletId);
+//             const data = (response.data);
+//             const flatJson = {
+//                 balance: (parseFloat(data.balance) / 100000000).toFixed(2)
+//             };
+//             socket.emit('showwallet', flatJson);
+//         })();
 
-    });
+//     });
 
-    socket.on('getWalletSent', function(input) {
+//     socket.on('getWalletSent', function(input) {
 
-        (async() => {
-            let response = await sxpapi.getWalletSentTransactions(input.walletId);
+//         (async() => {
+//             let response = await sxpapi.getWalletSentTransactions(input.walletId);
 
-            const data = (response.data);
-            const flatJson = [];
+//             const data = (response.data);
+//             const flatJson = [];
 
-            for (let i = 0; i < data.length; i++) {
-                let tempJson = {
-                    nonce: data[i].nonce,
-                    recipient: data[i].recipient ? data[i].recipient : data[i].asset.transfers ? data[i].asset.transfers.length > 1 ? `${data[i].asset.transfers.length} recipients` : `${data[i].asset.transfers[0].recipientId}` : "Other",
-                    memo: data[i].memo == undefined ? '<span>-</span>' : data[i].memo,
-                    amount: data[i].amount,
-                    id: data[i].id,
-                    timestamp: data[i].timestamp.human
-                };
-                flatJson.push(tempJson);
-            }
-            socket.emit('showWalletSent', flatJson);
-        })();
+//             for (let i = 0; i < data.length; i++) {
+//                 let tempJson = {
+//                     nonce: data[i].nonce,
+//                     recipient: data[i].recipient ? data[i].recipient : data[i].asset.transfers ? data[i].asset.transfers.length > 1 ? `${data[i].asset.transfers.length} recipients` : `${data[i].asset.transfers[0].recipientId}` : "Other",
+//                     memo: data[i].memo == undefined ? '<span>-</span>' : data[i].memo,
+//                     amount: data[i].amount,
+//                     id: data[i].id,
+//                     timestamp: data[i].timestamp.human
+//                 };
+//                 flatJson.push(tempJson);
+//             }
+//             socket.emit('showWalletSent', flatJson);
+//         })();
 
-    });
-});
+//     });
+// });
